@@ -1105,7 +1105,7 @@
 				name: "Elegant Tailored Suit",
 				description: "Sophisticated tailored suit with a polished fit, refined details, and versatile style for work, events, and special occasions.",
 				price: 129.99,
-				image: "Suit2.jpg"
+				image: "ElegantSuit2.jpg"
 			},
            {
 				id: 2,
