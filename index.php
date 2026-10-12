@@ -219,7 +219,7 @@
         /* Hero Section */
         .hero {
             padding: 180px 0 100px;
-            background: linear-gradient(135deg, rgba(248, 245, 242, 0.9) 0%, rgba(249, 232, 233, 0.8) 100%), url('banner1.png');
+            background: linear-gradient(135deg, rgba(248, 245, 242, 0.9) 0%, rgba(249, 232, 233, 0.8) 100%), url('banner2.jpg');
             background-size: cover;
             background-position: center;
             text-align: center;
@@ -987,7 +987,7 @@
                     <p>Customer satisfaction is at the heart of everything we do. From our responsive support team to our quality guarantee, we're committed to providing an exceptional shopping experience.</p>
                 </div>
                 <div class="about-image">
-                    <img src="about.jpg" alt="Uvelisse Store">
+                    <img src="about2.jpg" alt="Uvelisse Store">
                 </div>
             </div>
         </div>
@@ -1105,21 +1105,21 @@
 				name: "Elegant Tailored Suit",
 				description: "Sophisticated tailored suit with a polished fit, refined details, and versatile style for work, events, and special occasions.",
 				price: 129.99,
-				image: "Suit1.jpg"
+				image: "Suit2.jpg"
 			},
            {
 				id: 2,
 				name: "Elegant Suit Frock",
 				description: "Graceful frock-style suit with a flattering silhouette, soft fabric, and elegant detailing, perfect for festive gatherings and special occasions.",
 				price: 89.99,
-				image: "Frock.jpg"
+				image: "Frock2.jpg"
 			},
             {
                 id: 3,
                 name: "Chloe Wide-Leg Pants",
                 description: "Soft viscose blend, high-waisted design, comfortable for all-day wear.",
                 price: 69.99,
-                image: "Chloe Wide-Leg Pants1.png"
+                image: "Chloe Wide-Leg Pants2.jpg"
             },
            
                        
