@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uvelisse | Effortless Style for Every Woman</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #f8f5f2;
+            --secondary-color: #f9e8e9;
+            --accent-color: #d4a5a5;
+            --text-color: #333;
+            --text-light: #666;
+            --white: #ffffff;
+            --shadow: rgba(0, 0, 0, 0.08);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--primary-color);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+			color:#8851a5;;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: #8851a5;;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-light {
+            background-color: var(--white);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: #8851a5;;
+            color: var(--white);
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: #c89595;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px var(--shadow);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid #8851a5;;
+            color: #8851a5;;
+        }
+        
+        .btn-outline:hover {
+            background-color: #8851a5;;
+            color: var(--white);
+        }
+        
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 5px 20px var(--shadow);
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+        
+        header.scrolled {
+            padding: 15px 0;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #8851a5;;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--text-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: #8851a5;;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #8851a5;;
+            left: 0;
+            bottom: -5px;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        .cart-icon {
+            position: relative;
+            margin-left: 30px;
+            font-size: 1.2rem;
+            color: var(--text-color);
+            cursor: pointer;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #8851a5;;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(135deg, rgba(248, 245, 242, 0.9) 0%, rgba(249, 232, 233, 0.8) 100%), url('banner2.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: var(--text-color);
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+			color:#8851a5;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: var(--text-light);
+        }
+        
+        /* Featured Categories */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .category-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px var(--shadow);
+        }
+        
+        .category-icon {
+            font-size: 2.5rem;
+            color: #8851a5;;
+            margin-bottom: 15px;
+        }
+        
+        .category-card h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        
+        /* Products Section */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .product-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px var(--shadow);
+        }
+        
+        .product-img {
+            height: 360px;
+            width: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .product-card:hover .product-img {
+            transform: scale(1.05);
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-name {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        
+        .product-desc {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .product-price {
+            font-weight: 600;
+            color: #8851a5;;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .product-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .product-actions .btn {
+            padding: 10px 15px;
+            font-size: 0.9rem;
+            flex: 1;
+            text-align: center;
+        }
+        
+        /* Why Shop With Us */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #8851a5;;
+            margin-bottom: 20px;
+        }
+        
+        /* About Brand */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-top: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 15px 30px var(--shadow);
+        }
+        
+        .about-image img {
+            width: 500px;
+            height: 600px;
+            display: block;
+        }
+        
+        /* Reviews */
+        .reviews-slider {
+            display: flex;
+            overflow-x: auto;
+            gap: 30px;
+            margin-top: 40px;
+            padding: 10px 0;
+            scrollbar-width: thin;
+        }
+        
+        .review-card {
+            min-width: 320px;
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 20px var(--shadow);
+        }
+        
+        .review-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+        
+        .reviewer {
+            display: flex;
+            align-items: center;
+        }
+        
+        .reviewer-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        
+        .reviewer-name {
+            font-weight: 600;
+        }
+        
+        .reviewer-location {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        /* Newsletter */
+        .newsletter {
+            text-align: center;
+            background-color: var(--secondary-color);
+            padding: 60px 20px;
+            border-radius: var(--border-radius);
+        }
+        
+        .newsletter h2 {
+            margin-bottom: 20px;
+        }
+        
+        .newsletter p {
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .newsletter-form .btn {
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        
+        /* Contact */
+        .contact-container {
+            display: flex;
+            gap: 50px;
+            margin-top: 40px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-form {
+            flex: 1;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: #8851a5;;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2a2a2a;
+            color: #ddd;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .footer-logo span {
+            color: #8851a5;;
+        }
+        
+        .footer-col p {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: #8851a5;;
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 50px;
+                transition: var(--transition);
+                box-shadow: 0 10px 20px var(--shadow);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 0 0 30px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .cart-icon {
+                margin-left: 20px;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-form input {
+                border-radius: var(--border-radius);
+                margin-bottom: 15px;
+            }
+            
+            .newsletter-form .btn {
+                border-radius: var(--border-radius);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .categories-grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 15px;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+        
+        /* Cart Modal */
+        .cart-modal {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 350px;
+            height: 100%;
+            background-color: var(--white);
+            box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+            z-index: 1001;
+            transition: var(--transition);
+            padding: 30px 20px;
+            overflow-y: auto;
+        }
+        
+        .cart-modal.active {
+            right: 0;
+        }
+        
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .close-cart {
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+        
+        .cart-items {
+            margin-bottom: 30px;
+        }
+        
+        .cart-item {
+            display: flex;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .cart-item-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+        
+        .cart-item-info h4 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+        
+        .cart-item-price {
+            color: #8851a5;;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .cart-item-remove {
+            color: var(--text-light);
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+        
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .cart-empty {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-light);
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            display: none;
+        }
+        
+        .overlay.active {
+            display: block;
+        }
+        
+        /* Quick View Modal */
+        .quick-view-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 900px;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            z-index: 1002;
+            display: none;
+            padding: 30px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+        
+        .quick-view-modal.active {
+            display: block;
+        }
+        
+        .quick-view-content {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .quick-view-img {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+        
+        .quick-view-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .quick-view-info {
+            flex: 1;
+        }
+        
+        .close-quick-view {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+        
+        /* Success Messages */
+        .message {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 25px;
+            border-radius: var(--border-radius);
+            z-index: 1003;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        
+        .message.active {
+            display: block;
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Uvel<span>isse</span></a>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+           
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Effortless Style for Every Woman</h1>
+            <p>Discover premium fashion that combines comfort, quality, and timeless design for your everyday life. Curated for the modern woman who values both style and substance.</p>
+           
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="section-light" id="categories">
+        <div class="container">
+            <h2>Featured Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-tshirt"></i></div>
+                    <h3>Dresses</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-vest"></i></div>
+                    <h3>Tops & Blouses</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-utensils"></i></div>
+                    <h3>Bottom Wear</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-vest-patches"></i></div>
+                    <h3>Co-ord Sets</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Ethnic Wear</h3>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Listing -->
+    <section id="products">
+        <div class="container">
+            <h2>Our Collection</h2>
+            <div class="products-grid" id="products-container">
+                <!-- Products will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Shop With Us -->
+    <section class="section-light" id="why-us">
+        <div class="container">
+            <h2>Why Shop With Us</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-award"></i></div>
+                    <h3>Premium Quality Materials</h3>
+                    <p>We use only the finest fabrics that are durable, comfortable, and ethically sourced.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Comfortable Everyday Designs</h3>
+                    <p>Our pieces are designed for real life, offering both style and practicality.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                    <h3>Secure Checkout</h3>
+                    <p>Your payment information is protected with industry-leading security measures.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-shipping-fast"></i></div>
+                    <h3>Fast & Reliable Shipping</h3>
+                    <p>We deliver to your doorstep within 3-5 business days across the USA and globally.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-exchange-alt"></i></div>
+                    <h3>Easy Returns</h3>
+                    <p>Not satisfied? Return within 30 days for a full refund, no questions asked.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Brand -->
+    <section id="about">
+        <div class="container">
+            <h2>About Our Brand</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Founded in 2015, Uvelisse began with a simple mission: to provide women with high-quality, comfortable, and stylish clothing that doesn't compromise on ethics or craftsmanship.</p>
+                    <p>We believe fashion should empower, not restrict. Our designs are created with attention to detail, using sustainable materials and ethical production methods.</p>
+                    <p>Every piece in our collection is thoughtfully curated to help you build a versatile wardrobe that reflects your personal style while standing the test of time.</p>
+                    <p>Customer satisfaction is at the heart of everything we do. From our responsive support team to our quality guarantee, we're committed to providing an exceptional shopping experience.</p>
+                </div>
+                <div class="about-image">
+                    <img src="about2.jpg" alt="Uvelisse Store">
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Newsletter Signup -->
+    <section>
+        <div class="container">
+            <div class="newsletter">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter and be the first to know about new arrivals, exclusive offers, and style inspiration.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-light" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>We'd love to hear from you. Whether you have a question about our products, need sizing advice, or just want to say hello, our team is here to help.</p>
+                    
+                    
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h4>Support Hours</h4>
+                            <p>Monday - Friday: 9am - 6pm EST</p>
+                            <p>Saturday: 10am - 4pm EST</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>51 Warren Street, New York, NY 10007</p>
+                     
+                        </div>
+                    </div> 
+					<div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (845) 675-5674</p>
+                     
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <a href="#" class="footer-logo">Uvel<span>isse</span></a>
+                    <p>Effortless style for the modern woman. Quality fashion designed for comfort and longevity.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#products">Shop</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Policies</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return & Refund Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"> +1 (845) 675-5674</a></li>
+                        <li><a href="#"> 51 Warren Street, New York, NY 10007</a></li>
+                       
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Uvelisse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Product Data
+        const products = [
+           {
+				id: 1,
+				name: "Elegant Tailored Suit",
+				description: "Sophisticated tailored suit with a polished fit, refined details, and versatile style for work, events, and special occasions.",
+				price: 129.99,
+				image: "Suit2.jpg"
+			},
+           {
+				id: 2,
+				name: "Elegant Suit Frock",
+				description: "Graceful frock-style suit with a flattering silhouette, soft fabric, and elegant detailing, perfect for festive gatherings and special occasions.",
+				price: 89.99,
+				image: "Frock2.jpg"
+			},
+            {
+                id: 3,
+                name: "Chloe Wide-Leg Pants",
+                description: "Soft viscose blend, high-waisted design, comfortable for all-day wear.",
+                price: 69.99,
+                image: "Chloe Wide-Leg Pants2.jpg"
+            },
+           
+                       
+          
+        ];
+
+        // Cart Data
+        let cart = [];
+        let cartCount = 0;
+        let cartTotal = 0;
+
+        // DOM Elements
+        const productsContainer = document.getElementById('products-container');
+        const cartIcon = document.querySelector('.cart-icon');
+        const cartCountEl = document.querySelector('.cart-count');
+        const cartModal = document.querySelector('.cart-modal');
+        const closeCartBtn = document.querySelector('.close-cart');
+        const overlay = document.querySelector('.overlay');
+        const cartItemsContainer = document.querySelector('.cart-items');
+        const cartTotalEl = document.querySelector('.cart-total');
+        const cartTotalAmount = document.querySelector('.total-amount');
+        const checkoutBtn = document.querySelector('.cart-modal .btn');
+        const quickViewModal = document.querySelector('.quick-view-modal');
+        const closeQuickViewBtn = document.querySelector('.close-quick-view');
+        const successMessage = document.getElementById('successMessage');
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        const newsletterForm = document.querySelector('.newsletter-form');
+        const contactForm = document.getElementById('contactForm');
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            renderProducts();
+            setupEventListeners();
+            updateCartCount();
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        navLinks.classList.remove('active');
+                    }
+                });
+            });
+            
+            // Header scroll effect
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if(window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        });
+
+        // Render Products
+        function renderProducts() {
+            productsContainer.innerHTML = '';
+            
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-name">${product.name}</h3>
+                        <p class="product-desc">${product.description}</p>
+                        <div class="product-price">$${product.price.toFixed(2)}</div>
+                        
+                    </div>
+                `;
+                
+                productsContainer.appendChild(productCard);
+            });
+        }
+
+        // Setup Event Listeners
+        function setupEventListeners() {
+            // Cart icon click
+            cartIcon.addEventListener('click', openCart);
+            
+            // Close cart
+            closeCartBtn.addEventListener('click', closeCart);
+            overlay.addEventListener('click', closeCart);
+            
+            // Close quick view
+            closeQuickViewBtn.addEventListener('click', closeQuickView);
+            
+            // Mobile menu
+            mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+            
+            // Newsletter form
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input').value;
+                if(email) {
+                    showMessage('Thank you for subscribing! You\'ll receive our updates soon.');
+                    this.reset();
+                }
+            });
+            
+            // Contact form
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                
+                if(name && email && message) {
+                    showMessage('Thank you for your message! We\'ll get back to you soon.');
+                    this.reset();
+                }
+            });
+            
+            // Close cart and quick view with Escape key
+            document.addEventListener('keydown', function(e) {
+                if(e.key === 'Escape') {
+                    closeCart();
+                    closeQuickView();
+                }
+            });
+            
+            // Delegate events for dynamically added elements
+            document.addEventListener('click', function(e) {
+                // Add to cart button
+                if(e.target.classList.contains('add-to-cart') || e.target.closest('.add-to-cart')) {
+                    const button = e.target.classList.contains('add-to-cart') ? e.target : e.target.closest('.add-to-cart');
+                    const productId = parseInt(button.getAttribute('data-id'));
+                    addToCart(productId);
+                }
+                
+                // Quick view button
+                if(e.target.classList.contains('quick-view') || e.target.closest('.quick-view')) {
+                    const button = e.target.classList.contains('quick-view') ? e.target : e.target.closest('.quick-view');
+                    const productId = parseInt(button.getAttribute('data-id'));
+                    openQuickView(productId);
+                }
+                
+                // Add to cart from quick view
+                if(e.target.classList.contains('add-to-cart-quick') || e.target.closest('.add-to-cart-quick')) {
+                    const productId = parseInt(document.querySelector('.quick-view-modal').getAttribute('data-id'));
+                    addToCart(productId);
+                    closeQuickView();
+                }
+                
+                // Remove item from cart
+                if(e.target.classList.contains('cart-item-remove') || e.target.closest('.cart-item-remove')) {
+                    const button = e.target.classList.contains('cart-item-remove') ? e.target : e.target.closest('.cart-item-remove');
+                    const productId = parseInt(button.getAttribute('data-id'));
+                    removeFromCart(productId);
+                }
+            });
+        }
+
+        // Cart Functions
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if(!product) return;
+            
+            // Check if product already in cart
+            const existingItemIndex = cart.findIndex(item => item.id === productId);
+            
+            if(existingItemIndex >= 0) {
+                // Increase quantity
+                cart[existingItemIndex].quantity++;
+            } else {
+                // Add new item
+                cart.push({
+                    ...product,
+                    quantity: 1
+                });
+            }
+            
+            updateCartCount();
+            renderCartItems();
+            showMessage(`${product.name} added to cart!`);
+            
+            // If cart is open, update it
+            if(cartModal.classList.contains('active')) {
+                renderCartItems();
+            }
+        }
+
+        function removeFromCart(productId) {
+            const itemIndex = cart.findIndex(item => item.id === productId);
+            
+            if(itemIndex >= 0) {
+                cart.splice(itemIndex, 1);
+                updateCartCount();
+                renderCartItems();
+            }
+        }
+
+        function updateCartCount() {
+            cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+            cartCountEl.textContent = cartCount;
+            
+            // Update cart total
+            cartTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+            
+            // Show/hide cart total and checkout button
+            if(cartCount > 0) {
+                cartTotalEl.style.display = 'flex';
+                checkoutBtn.style.display = 'block';
+                document.querySelector('.cart-empty').style.display = 'none';
+            } else {
+                cartTotalEl.style.display = 'none';
+                checkoutBtn.style.display = 'none';
+                document.querySelector('.cart-empty').style.display = 'block';
+            }
+            
+            cartTotalAmount.textContent = `$${cartTotal.toFixed(2)}`;
+        }
+
+        function renderCartItems() {
+            cartItemsContainer.innerHTML = '';
+            
+            if(cart.length === 0) {
+                cartItemsContainer.innerHTML = '<div class="cart-empty">Your bag is empty</div>';
+                return;
+            }
+            
+            cart.forEach(item => {
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-img">
+                    <div class="cart-item-info">
+                        <h4>${item.name}</h4>
+                        <div class="cart-item-price">$${item.price.toFixed(2)} × ${item.quantity}</div>
+                        <div class="cart-item-remove" data-id="${item.id}">Remove</div>
+                    </div>
+                `;
+                cartItemsContainer.appendChild(cartItem);
+            });
+        }
+
+        function openCart() {
+            cartModal.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCart() {
+            cartModal.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Quick View Functions
+        function openQuickView(productId) {
+            const product = products.find(p => p.id === productId);
+            if(!product) return;
+            
+            document.getElementById('quick-view-name').textContent = product.name;
+            document.getElementById('quick-view-description').textContent = product.description;
+            document.getElementById('quick-view-price').textContent = `$${product.price.toFixed(2)}`;
+            document.getElementById('quick-view-image').src = product.image;
+            document.getElementById('quick-view-image').alt = product.name;
+            
+            quickViewModal.setAttribute('data-id', productId);
+            quickViewModal.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeQuickView() {
+            quickViewModal.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Mobile Menu
+        function toggleMobileMenu() {
+            navLinks.classList.toggle('active');
+        }
+
+        // Show Success Message
+        function showMessage(text) {
+            successMessage.textContent = text;
+            successMessage.classList.add('active');
+            
+            setTimeout(() => {
+                successMessage.classList.remove('active');
+            }, 3000);
+        }
+    </script>
+
+
+
+</body>
+</html>
