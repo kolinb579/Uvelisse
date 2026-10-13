@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+<script defer src="https://cloud.umami.is/script.js" data-website-id="989d9f0d-5616-4c1b-9e01-4a3105980af1"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uvelisse | Effortless Style for Every Woman</title>
